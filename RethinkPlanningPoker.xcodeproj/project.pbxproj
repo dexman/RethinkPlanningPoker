@@ -51,7 +51,7 @@
 		86609DD014DF399600AD6D10 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		86609DD314DF399B00AD6D10 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		86609DD514DF39A100AD6D10 /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
-		86B67A3B14E0C5FE00DFAB1F /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee.png; path = ../../coffee.png; sourceTree = "<group>"; };
+		86B67A3B14E0C5FE00DFAB1F /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee.png; sourceTree = "<group>"; };
 		86C034D114DDCBBA003C5589 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		86C034D914DDCE40003C5589 /* card-back~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-back~ipad.png"; path = "RethinkPlanningPoker/card-back~ipad.png"; sourceTree = SOURCE_ROOT; };
 		86C034DA14DDCE40003C5589 /* card-back~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-back~iphone.png"; path = "RethinkPlanningPoker/card-back~iphone.png"; sourceTree = SOURCE_ROOT; };
