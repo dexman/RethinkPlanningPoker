@@ -99,6 +99,7 @@ static const CGFloat kMinPadding = 10.0f;
             card.frontShowing = YES;
         } else {
             CGRect frame = currentCardGridFrame_;
+            currentCard_ = nil;
             currentCardGridFrame_ = CGRectNull;
             [UIView animateWithDuration:0.2
                              animations:^{
