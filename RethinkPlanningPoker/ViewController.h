@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Card;
+
 @interface ViewController : UIViewController {
+    Card *currentCard_;
     CGRect currentCardGridFrame_;
 }
 

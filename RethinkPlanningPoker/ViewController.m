@@ -53,11 +53,27 @@ static const CGFloat kMinPadding = 10.0f;
         [self.view addSubview:card];
     }
 
+    currentCard_ = nil;
     currentCardGridFrame_ = CGRectNull;
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+}
+
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (currentCard_ && !currentCard_.frontShowing) {
+        currentCard_.frontShowing = YES;
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -66,7 +82,8 @@ static const CGFloat kMinPadding = 10.0f;
 
 - (void)cardTouched:(Card *)card {
     [self.view bringSubviewToFront:card];
-    if (CGRectIsNull(currentCardGridFrame_)) {
+    if (!currentCard_) {
+        currentCard_ = card;
         currentCardGridFrame_ = card.frame;
         card.frontShowing = NO;
         [UIView animateWithDuration:0.5
