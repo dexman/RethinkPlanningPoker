@@ -78,7 +78,7 @@
 
 - (void)deckCardTapped:(UITapGestureRecognizer *)tap {
     Card *card = (Card *)tap.view;
-    if (!card.frontHidden && !card.smallFrontHidden) {
+    if (!self.currentCard && !card.frontHidden && !card.smallFrontHidden) {
         [self flipToBack:card];
     } else if (card.frontHidden) {
         [self flipToLargeFront:card];
