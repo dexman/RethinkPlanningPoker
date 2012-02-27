@@ -24,8 +24,6 @@
 				<string>Icon@2x.png</string>
 				<string>Icon~ipad.png</string>
 			</array>
-			<key>UIPrerenderedIcon</key>
-			<false/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
