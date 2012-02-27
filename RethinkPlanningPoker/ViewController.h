@@ -10,9 +10,14 @@
 
 @class Card;
 
-@interface ViewController : UIViewController {
-    Card *currentCard_;
-    CGRect currentCardGridFrame_;
-}
+@interface ViewController : UIViewController
+
+@property (nonatomic, assign) CGRect currentCardOriginalFrame;
+@property (nonatomic, assign) Card *currentCard;
+
+- (void)flipToBack:(Card *)card;
+- (void)flipToLargeFront:(Card *)card;
+- (void)flipToSmallFront:(Card *)card;
+- (void)flipCard:(Card *)card withAnimations:(dispatch_block_t)animations;
 
 @end

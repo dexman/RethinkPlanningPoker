@@ -2,23 +2,24 @@
 //  Card.h
 //  RethinkPlanningPoker
 //
-//  Created by Arthur Dexter on 2/2/12.
+//  Created by Arthur Dexter on 2/25/12.
 //  Copyright (c) 2012 Arthur Dexter. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface Card : UIControl {
-    UIView *front_;
-    UILabel *label_;
-    UIImageView *imageView_;
+@interface Card : UIView {
+    UIImageView *smallFront_;
+    UIImageView *largeFront_;
     UIImageView *back_;
 }
 
-@property (nonatomic, strong) NSString *text;
-@property (nonatomic, strong) UIImage *image;
-@property (nonatomic) BOOL frontShowing;
+@property (nonatomic, strong) NSString *value;
+@property (nonatomic, assign) BOOL frontHidden;
+@property (nonatomic, assign) BOOL smallFrontHidden;
 
-+ (CGSize)cardSizeThatFits:(CGSize)size rows:(NSUInteger)rows columns:(NSUInteger)columns;
++ (CGSize)defaultSize;
++ (CGFloat)defaultPadding;
++ (Card *)cardWithValue:(NSString *)value;
 
 @end
